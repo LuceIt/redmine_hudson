@@ -1,0 +1,249 @@
+# $Id: README.rdoc 570 2011-06-04 23:59:26Z toshiyuki.ando1971@gmail.com $
+= Hudson Plugin 1.0.7
+
+This is a plugin collaborates with Hudson for Redmine.
+
+== What's Hudson ?
+
+Huson is application for Continuous Integration.
+Easy install configuration, and good ui.
+
+More detail {Meet Hudson}[http://wiki.hudson-ci.org/display/HUDSON/Meet+Hudson]
+
+== Requirements
+* Require Redmine 0.8.x.
+* Recommend Hudson 1.313.
+
+== Feature
+=== Show Job List
+Show job details.
+
+* Name, Description, Latest Build ( Build number, Result, Date ) and health report.
+* You can change description visibility dynamically.
+* Provide a link to Hudson, if plugin found keyword in Health Report.
+* Bulid number linked to build result page.
+* Download artifacts.
+* Click clock-icon, request hudson to build.
+* Mr. hudson appears. ( sorry, not emotional )
+* You can get job list by Atom.
+
+=== Show Build History
+Click note icon, show build history.
+
+* build number, result, date.
+* Bulid number linked to build result page.
+* Console icon linked to console page.
+
+=== Show build history on activity
+
+* jobname, build number, test-result(only number of items) and changesets.
+
+=== Show build result on issue
+
+* job-name, build-number, result and built date and time. when Hudson builds revisions associated issues.
+
+=== Search issues related particular build
+
+You can search issues related job and build using filter.
+Plugin chases issues by taking following step.
+ Hudson Job -> Hudson Build -> Related Changeset -> Revision -> Issue
+Hudson Build and Related Changeset are too much, so plugin limits number of Builds and Changesets per each Hudson Job.
+You can change limit settings on settings/plugin/redmine_hudson.
+
+=== Rake task 'redmine_hudson:fetch'
+
+You can get build results using rake task 'redmine_hudson:fetch'.
+If you use rake task, please uncheck 'AutoFetch' setting.
+You can change 'AutoFetch' setting on settings/plugin/redmine_hudson.
+
+=== Clean up stored data
+
+You can delete old data ( builds, changesets, test results ).
+Settings are like Hudson.
+
+* rotate days ( 1day = keep today's data )
+* rotate nums
+
+=== Settings for each projects
+
+* Hudson url (can use https)
+User can specify url separately, for plugin access and user access.
+* auth user, password ( 0.1.1 higher )
+* can stop plugin getting test results and changesets. (Getting test results and changesets needs a good amount of time.)
+* choose job
+* compact mode ( show only job name and latest build)
+* keyword and url for health report
+
+=== Settings for plugins (all projects)
+
+Go  Administration -> Plugins -> 'Redmine Hudson Plugin' Configure.
+
+* You can choose format to write job description. HTML or Textile.
+* AutoFetch Mode. Plugin fetches information from Hudson during action 'index'.
+* Number of Builds per each Hudson Job. ( for search issues )
+* Number of Changesets per each Hudson Job. ( for search issues )
+
+== Language contributors
+
+[de.yml] Jens Goldhammer, Florian Bartels
+[es.yml] juancayetano.delgado
+[fr.yml] Francois-Xavier CAUVIN
+[hu.yml] Péter Major
+[it.yml] Marco Bazzani
+[ru.yml] Eugene Sirotkin.
+[zh.yml] Billy T
+
+== Install Instructions
+
+=== Install plugin
+
+1. Copy the plugin into the vendor/plugins directory
+2. Migrate plugin: rake db:migrate_plugins RAILS_ENV=production
+3. Start Redmine
+
+=== Enable plugin on project
+
+1. Move to Project settings
+2. Click 'Modules'
+3. Check the box 'Hudson', and save.
+
+=== Edit Hudson settings
+
+1. Click 'Hudson' tab on the menu
+2. Click 'Settings' in sidebar
+3. Edit settings ( url, job... )
+
+=== View jobs
+
+1. Click 'Hudson' tab on the menu (In first time, it takes long time)
+
+== Note
+
+=== Recommend Hudson 1.313
+
+If you use old version of Hudson, plugin may not get test results and changesets.
+Plugin store build information, if plugin can't get test results or changesets.
+But, If plugin fail, never get test results, changesets again.
+
+=== Using IE8
+
+Please use Compatibility View in IE8.
+
+=== Exclusive Control
+
+Plugin has no exclusive control, so plugin doesn't work when redmine works on multi-process.
+Hopefully i fix it.
+
+=== Something is wrong with plugin
+
+you should try to delete data from database.
+Use 'delete history' button in setting page.
+
+== Changelog
+
+=== 1.0.7
+
+* ##682 (Defect) Plugin has no license
+* ##675 (Defect) db:migrate_plugins down failed
+* ##713 (Defect) I checked "Plugin uses below url for access to hudson.", but textbox doesn't appear
+* ##714 (Feature) Dutch translation
+* ##769 (Feature) Russian translation
+
+=== 1.0.6.1
+
+* ##563 (Defect) can't disable rotate, when enable 'rotate' with one job.
+* ##515 (Defect) can't save job rotate settings with mysql 5.0.
+
+=== 1.0.6
+
+* ##476 (Feature) Support Atom format (thanks! Akiko Takano)
+
+=== 1.0.5
+
+* ##411 (Feature) Chinese translation
+* ##387 (Defect) Error occurs when Hudson.Fetch fails by HudsonApiException
+* ##386 (Feature) Localization for permission string
+
+=== 1.0.4
+
+* ##367 (Defect) Error occurs when delete all history
+* ##366 (Defect) Fail to save if new project settings have health report settings
+* ##344 (Defect) Fail to save Health report settings
+
+=== 1.0.3.1
+
+* ##318 (Defect) some tests failed
+* ##316 (Defect) internal error occurres on issue page
+
+=== 1.0.3
+
+* ##282 (Defect) unit and feature test failed with redmine 0.9.x or trunk
+* ##304 (Defect) migrate_plugins failed with MySQL
+* ##306 (Feature) User can specify url separately, for plugin access and user access
+* ##314 (Feature) Italian translation
+
+=== 1.0.2
+
+* ##198 (Feature) You can download artifacts.
+* ##266 (Feature) Clean up stored data.
+* ##267 (Feature) Search issues related particular build.
+* ##235 (Defect) Hudson icon does not display in activitiy view with IE
+* ##273 (Defect) Internal error occures when hudson has no response.
+* ##276 (Defect) Translation missing occures on redmine0.9.x or trunk
+* ##284 (Defect) When saving the settings for a project, get the exception.
+* ##286 (Defect) Can't get changeset information.
+* ##288 (Defect) Can't show build results on issue redmine0.9.x or trunk
+* ##291 (Defect) db:migrate_plugins failed on PostgreSQL
+
+=== 1.0.1.1
+
+* ##244 "rake db:migrate_plugins" doesn't work without rcov
+* ##242 Build job and Build history doesn't work on Redmine 0.8.7
+
+=== 1.0.1
+
+* ##228 Install Instructions
+* ##225 You never can check off 'Show Compact'
+* ##224 You can find jobs built today
+* ##219 Can't get RSS on activity page, when check 'Hudson' box
+* ##218 Anonymous can't see acitivity
+* ##212 Plugin can't show latest build result
+
+=== 1.0.0
+
+* You can get build results using rake task 'redmine_hudson:fetch'
+* Choose format to write job description HTML or Textile
+* You can also change description visibility dynamically
+
+=== 0.1.6
+
+* Health report settings comes in useful.
+
+=== 0.1.5
+
+* Show build result on issue. Use Hudson icons.
+
+=== 0.1.4
+
+* Show build history on activity. Save infomation on database.
+
+=== 0.1.3
+
+* Fixed BasicAuth bug.
+
+=== 0.1.2
+
+* Fixed https-connection bug.
+
+=== 0.1.1
+
+* Support basic-authentication and https-connection.
+
+=== 0.1.0
+
+* First release
+
+== Contact info
+
+* Website  -> r-labs[http://www.r-labs.org/]
+* Email    -> couger@kt.rim.or.jp

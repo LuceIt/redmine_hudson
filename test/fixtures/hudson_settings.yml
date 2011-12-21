@@ -1,0 +1,65 @@
+# $Id: hudson_settings.yml 477 2010-03-27 16:45:28Z toshiyuki.ando1971 $
+#noauth_onejob_nohealthreport
+one:
+  id: 1
+  project_id: 1
+  url: http://noauth.onejob.nohealthreport.local:9090/
+  url_for_plugin: http://noauth.onejob.nohealthreport.local:19090/
+  job_filter: simple-ruby-application
+  show_compact: false
+  auth_user:
+  auth_password: 
+  get_build_details: true
+  look_and_feel: hudson
+
+#hasauth_threejob_twohealthreport
+two:
+  id: 2
+  project_id: 2
+  url: http://hasauth.twojob.twohealthreport.local:9090/
+  url_for_plugin: http://hasauth.twojob.twohealthreport.local:19090/
+  job_filter: Have White Space,maven-application,Disabled
+  show_compact: false
+  auth_user: admin
+  auth_password: adminpass
+  get_build_details: true
+  look_and_feel: hudson
+
+#noauth_nojob_nohealthreport:
+three:
+  id: 3
+  project_id: 3
+  url: http://noauth.nojob.nohealthreport.local:9090/
+  url_for_plugin: http://noauth.nojob.nohealthreport.local:19090/
+  job_filter:
+  show_compact: false
+  auth_user:
+  auth_password:
+  get_build_details: true
+  look_and_feel: hudson
+
+#noauth_onenewjob_twohealthreport:
+four:
+  id: 4
+  project_id: 4
+  url: http://noauth.onenewjob.twohealthreport.local:9090/
+  url_for_plugin: http://noauth.onenewjob.twohealthreport.local:19090/
+  job_filter: New Job
+  show_compact: false
+  auth_user:
+  auth_password:
+  get_build_details: true
+  look_and_feel: hudson
+
+#noauth_onenewjob_nohealthreport - no hudson_jobs
+five:
+  id: 5
+  project_id: 5
+  url: http://noauth.onenewjob.nohealthreport.no-hudson-jobs.local:9090/
+  url_for_plugin: http://noauth.onenewjob.twohealthreport.local:19090/
+  job_filter: One Job,Two Job
+  show_compact: false
+  auth_user:
+  auth_password:
+  get_build_details: false
+  look_and_feel: hudson

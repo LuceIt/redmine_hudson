@@ -1,0 +1,22 @@
+#$Id: hudson_job_settings.yml 558 2010-10-03 08:01:45Z toshiyuki.ando1971 $
+
+simple_ruby_application:
+  id: 1
+  hudson_job_id: 1
+  build_rotate: 1
+  build_rotator_days_to_keep: 1
+  build_rotator_num_to_keep: 5
+
+have_white_space:
+  id: 2
+  hudson_job_id: 2
+  build_rotate: 1
+  build_rotator_days_to_keep: -1
+  build_rotator_num_to_keep: 5
+
+maven_application:
+  id: 3
+  hudson_job_id: 3
+  build_rotate: 1
+  build_rotator_days_to_keep: 2
+  build_rotator_num_to_keep: -1

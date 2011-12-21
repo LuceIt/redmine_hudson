@@ -1,0 +1,9 @@
+<%# $Id: _history.rhtml 201 2009-07-04 15:56:53Z toshiyuki.ando1971 $
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+<%="#{l(:label_build_history)}" %>
+<hr style="width:18em;">
+<%@builds.each do|build| %>
+<p class="build-entry"><%=link_to "##{build[:number]} #{build[:result]}", build[:url]%> <span style="font-size:smaller;"><%=build[:published].strftime("%Y/%m/%d %H:%M:%S") %></span> <%=link_to image_tag('console.png', :plugin => "redmine_hudson"), "#{build[:url]}console"%></p>
+<% end %>

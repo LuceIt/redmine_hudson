@@ -1,0 +1,6 @@
+#$Id: hudson_build_artifacts.yml 403 2009-12-05 04:17:10Z toshiyuki.ando1971 $
+
+# simple_ruby_application_build1
+#   - app.rb
+#   - readme.rdoc
+

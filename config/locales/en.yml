@@ -1,0 +1,70 @@
+# $Id: en.yml 523 2010-05-29 11:56:50Z toshiyuki.ando1971 $
+# English strings go here
+en:
+  label_hudson: Hudson
+  label_hudson_plural: Hudson
+  label_build: Build
+  label_latest_build: Latest Build
+  label_job_list: Job List
+  label_settings: Settings
+  label_url: URL
+  label_jobs: Jobs
+  label_build_history: Build History
+  label_update_jobs: Update Jobs
+  label_build_now: Build Now
+  label_show_build_history: Show Build History
+  label_show_compact: Show Compact
+  label_health_report_build_stability: HealthReport:BuildStability
+  label_health_report_test_result: HealthReport:TestResult
+  label_database: DataBase
+  label_get_build_details: Get Build Details (changesets and test-results)
+  label_look_and_feel: Look and Feel (only icons)
+  label_look_and_feel_hudson: Hudson
+  label_look_and_feel_plugin: Plugin original
+  label_add_health_report: Add HealthReport Setting
+  label_health_report: Health Report
+  label_health_report_settings: Health Report Settings
+  label_autofetch: AutoFetch
+  label_job_description_format: Format for Hudson-Job Description
+  label_show_description: Show Description
+  label_hide_description: Hide Description
+  label_todays_build: Today's Build
+  label_build_artifacts: Artifacts
+  label_num_of_stored_builds: Num of Builds
+  label_delete_old_build: Delete Old Build
+  label_log_rotator_days_to_keep: Days To Keep
+  label_log_rotator_num_to_keep: Num To Keep
+  label_query_limit_builds_each_job: Max Number of Builds for query (Using search issues)
+  label_query_limit_changesets_each_job: Max Number of Changesets for query (Using search issues)
+  label_use_url_for_plugin: Plugin uses below url for access to hudson. Don't use above. ( for user )
+
+  field_hudson_job: Hudson(Job)
+  field_hudson_build: Hudson(BuildNumber)
+
+  button_delete_history: Delete History
+
+  notice_no_jobs: No Jobs
+  notice_no_builds: No Builds
+
+  notice_building: Now Building...
+  notice_hudson_url: 'with http://, https:// ...'
+  notice_get_build_details: Take the checkmark off, if take a lot of time.
+  notice_health_report: Provide a link to Hudson, if plugin find keyword in Health Report.
+  notice_health_report_setting: 'If plugin find keyword - ${keyword} in HealthReport, Provide a link to Hudson - ${url_format}'
+  notice_autofetch: Fetch information from Hudson during action 'index'. <br> You can call rake-task "redmine_hudson:fetch" by an external script.
+
+  notice_err_cant_connect: "Can't Connect Hudson {{value}}"
+  notice_err_response_invalid: 'Response Invalid {{value}}'
+  notice_err_http_error: 'Http Error {{value}}'
+  notice_err_no_settings: "No settings for this project. Please <a href='{{value}}'>confirm settings</a>"
+  notice_err_no_jobs: Hudson has no job
+  notice_err_invalid_url: Invalid URL
+  notice_err_no_job : 'job not found [{{value}}]'
+  notice_err_unknown: 'Unknown Error {{value}}'
+
+  notice_err_build_failed: 'Build failed {{value}}'
+  notice_err_build_failed_no_job: 'Build failed. Job not found [{{value}}]'
+
+  permission_view_hudson: View Hudson
+  permission_build_hudson: Build Hudson
+  permission_edit_hudson_settings: Edit Hudson settings

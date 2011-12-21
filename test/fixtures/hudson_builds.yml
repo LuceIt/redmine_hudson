@@ -1,0 +1,21 @@
+#$Id: hudson_builds.yml 403 2009-12-05 04:17:10Z toshiyuki.ando1971 $
+simple_ruby_application_build1:
+  id: 1
+  hudson_job_id: 1
+  number: 1
+  result: ""
+  finished_at:
+  building: "true"
+  error:
+  caused_by: 1
+
+nunit_build1:
+  id: 2
+  hudson_job_id: 5
+  number: 1
+  result: "SUCCESS"
+  finished_at:
+  building: "false"
+  error:
+  caused_by: 1
+  

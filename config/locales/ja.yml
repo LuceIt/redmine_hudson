@@ -1,0 +1,71 @@
+# $Id: ja.yml 523 2010-05-29 11:56:50Z toshiyuki.ando1971 $
+# for Redmine-Trunk Japanise strings go here
+ja:
+  label_hudson: Hudson
+  label_hudson_plural: Hudson
+  label_build: ビルド
+  label_latest_build: 最新のビルド
+  label_job_list: ジョブの一覧
+  label_settings: 設定
+  label_url: URL
+  label_url_for_plugin: HudsonプラグインがアクセスするURL
+  label_jobs: 表示するジョブ
+  label_build_history: ビルド履歴
+  label_update_jobs: ジョブの一覧を更新する
+  label_build_now: Build実行
+  label_show_build_history: ビルド履歴を表示する
+  label_show_compact: 簡単表示
+  label_health_report_build_stability: ヘルスレポート:安定したビルド
+  label_health_report_test_result: ヘルスレポート:テスト結果
+  label_database: DataBase
+  label_get_build_details: ビルドの詳細（変更とテスト結果）を取得する
+  label_look_and_feel: 見た目 (アイコンが変わります)
+  label_look_and_feel_hudson: Hudson
+  label_look_and_feel_plugin: プラグイン風
+  label_add_health_report: ヘルスレポートの設定を追加
+  label_health_report: ヘルスレポート
+  label_health_report_settings: ヘルスレポートの設定
+  label_autofetch: AutoFetch
+  label_job_description_format: ジョブの説明に使う書式
+  label_show_description: 詳細を表示する
+  label_hide_description: 詳細を隠す
+  label_todays_build: 今日のビルド
+  label_build_artifacts: ビルド成果物
+  label_num_of_stored_builds: 保存しているビルドの数
+  label_delete_old_build: 古いビルドを破棄
+  label_log_rotator_days_to_keep: ビルドの保存日数
+  label_log_rotator_num_to_keep: ビルドの保存最大数
+  label_query_limit_builds_each_job: ジョブごとに追跡するチェンジセットの件数（チケットの検索で利用します）
+  label_query_limit_changesets_each_job: ジョブごとに追跡するチェンジセットの件数（チケットの検索で利用します）
+  label_use_url_for_plugin: プラグインからアクセスする場合は、上記と異なるURLを使います。
+
+  field_hudson_job: Hudson(ジョブ名)
+  field_hudson_build: Hudson(Build番号)
+
+  button_delete_history: 履歴を削除
+
+  notice_no_jobs: ジョブはありません。
+  notice_no_builds: ビルドは実行されていません。
+
+  notice_building: ビルド中です。
+  notice_hudson_url: 'http://, https:// から記述してください'
+  notice_get_build_details: 表示に時間がかかる場合は、チェックを外してください
+  notice_health_report: ヘルスレポートの中に指定した文字を見つけたら、Hudson へのリンクを作成します
+  notice_health_report_setting: 'ヘルスレポートの中に ${keyword} を見つけたら, Hudson へのリンク ${url_format} を作成します'
+  notice_autofetch: アクション 'index' の中で最新の情報を取得します。<br> 定期的に情報を取得したい場合は rake タスク "redmine_hudson:fetch" を使ってください。
+
+  notice_err_cant_connect: "Hudson に接続できませんでした（Hudson が起動していないかもしれません） {{value}}"
+  notice_err_response_invalid: 'Hudson からの応答が何か変です。 {{value}}'
+  notice_err_http_error: 'Hudson からエラーが返って来ました。{{value}}'
+  notice_err_no_settings: このプロジェクトの設定が見当たりません。<a href='{{value}}'>設定を確認</a>してください。
+  notice_err_no_jobs: URLが設定されていないか、HudsonにJobが登録されていません。
+  notice_err_invalid_url: URLに誤りがあるようです。
+  notice_err_no_job : 'Jobが見当たりません。[{{value}}]'
+  notice_err_unknown: 'エラーが発生しました。{{value}}'
+
+  notice_err_build_failed: 'ビルドに失敗しました。{{value}}'
+  notice_err_build_failed_no_job: 'ビルドに失敗しました。Jobが見当たりません。[{{value}}]'
+
+  permission_view_hudson: Hudsonの閲覧
+  permission_build_hudson: Hudsonのビルド
+  permission_edit_hudson_settings: Hudsonの管理

@@ -1,0 +1,8 @@
+#$Id: hudson_build_changesets.yml 402 2009-12-05 03:04:04Z toshiyuki.ando1971 $
+four_nunit_build1_rev110:
+  id: 1
+  hudson_build_id: 2
+  repository_id: 40
+  revision: 110
+  error: ""
+  

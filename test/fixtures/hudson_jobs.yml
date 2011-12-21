@@ -1,0 +1,64 @@
+#$Id: hudson_jobs.yml 402 2009-12-05 03:04:04Z toshiyuki.ando1971 $
+
+# one   - simple_ruby_application
+# two   - have_white_space
+#       - maven_application
+#       - disabled
+# three - (none)
+# four  - nunit
+# five  - (none)
+
+simple_ruby_application:
+  id: 1
+  project_id: 1
+  hudson_id: 1
+  name: simple-ruby-application
+  latest_build_number:
+  created_at: 2009-06-28 22:06:08
+  updated_at: 2009-06-28 22:06:08
+  description: ---
+  state: ---
+
+have_white_space:
+  id: 2
+  project_id: 2
+  hudson_id: 2
+  name: Have White Space
+  latest_build_number:
+  created_at: 2009-06-28 23:06:08
+  updated_at: 2009-06-28 23:06:08
+  description: ---
+  state: ---
+
+maven_application:
+  id: 3
+  project_id: 2
+  hudson_id: 2
+  name: maven-application
+  latest_build_number: 5
+  created_at: 2009-06-28 23:06:08
+  updated_at: 2009-06-28 23:06:08
+  description: ---
+  state: ---
+
+disabled:
+  id: 4
+  project_id: 2
+  hudson_id: 2
+  name: Disabled
+  latest_build_number:
+  created_at: 2009-06-28 23:06:08
+  updated_at: 2009-06-28 23:06:08
+  description: ---
+  state: ---
+
+nunit:
+  id: 5
+  project_id: 4
+  hudson_id: 4
+  name: NUnit
+  latest_build_number: 1
+  created_at: 2009-06-28 23:06:08
+  updated_at: 2009-06-28 23:06:08
+  description: ---
+  state: ---
